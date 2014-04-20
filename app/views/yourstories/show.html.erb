@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @yourstory.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @yourstory.description %>
+</p>
+
+<p>
+  <b>Remote image url:</b>
+  <%= @yourstory.remote_image_url %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @yourstory.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_yourstory_path(@yourstory) %> |
+<%= link_to 'Back', yourstories_path %>

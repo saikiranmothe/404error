@@ -1,0 +1,69 @@
+<h1>Listing places</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Latitube</th>
+    <th>Longitude</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Opening time</th>
+    <th>Closeing time</th>
+    <th>Established</th>
+    <th>Wiki link</th>
+    <th>Fbpage link</th>
+    <th>Website</th>
+    <th>Verify</th>
+    <th>Remote image url</th>
+    <th>Remote banner url</th>
+    <th>Remote banner1 url</th>
+    <th>Remote banner2 url</th>
+    <th>Remote banner3 url</th>
+    <th>Rating</th>
+    <th>Youtube link</th>
+    <th>Village</th>
+    <th>Mandal</th>
+    <th>District</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @places.each do |place| %>
+  <tr>
+    <td><%= place.name %></td>
+    <td><%= place.address %></td>
+    <td><%= place.latitube %></td>
+    <td><%= place.longitude %></td>
+    <td><%= place.category %></td>
+    <td><%= place.description %></td>
+    <td><%= place.opening_time %></td>
+    <td><%= place.closeing_time %></td>
+    <td><%= place.established %></td>
+    <td><%= place.wiki_link %></td>
+    <td><%= place.fbpage_link %></td>
+    <td><%= place.website %></td>
+    <td><%= place.verify %></td>
+    <td><%= place.remote_image_url %></td>
+    <td><%= place.remote_banner_url %></td>
+    <td><%= place.remote_banner1_url %></td>
+    <td><%= place.remote_banner2_url %></td>
+    <td><%= place.remote_banner3_url %></td>
+    <td><%= place.rating %></td>
+    <td><%= place.youtube_link %></td>
+    <td><%= place.village_id %></td>
+    <td><%= place.mandal_id %></td>
+    <td><%= place.district_id %></td>
+    <td><%= place.user_id %></td>
+    <td><%= link_to 'Show', place %></td>
+    <td><%= link_to 'Edit', edit_place_path(place) %></td>
+    <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Place', new_place_path %>

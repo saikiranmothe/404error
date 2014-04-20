@@ -1,0 +1,124 @@
+<div class="bg-content">
+  <div class="container">
+     <div class="row">
+        <div class="span12"> 
+      <!--============================== slider =================================-->
+      <div class="flexslider">
+          <h1 class="text-center">Featured Places </h1>
+          <hr>
+          <ul class="slides">
+            <% @latest_places.each do |place| %>
+
+            <li> <img width="770" height="393" src="<%= place.remote_banner_url %>" alt="<%= place.name %>" > </li>
+            
+            <% end  %>
+          </ul>
+
+      </div>
+      <span id="responsiveFlag"></span>
+      <div class="block-slogan">
+          <h2>Welcome to TelanganaPlaces</h2>
+          <div>
+            <p style="color:pink">
+            TelanganaPlaces is all about platform for Telangana Places.Tourism Platform of Telangana.<a class="block-slogan" align="center" href="/about" target="" class="link-1">   for more info about Telangana Places..</p>
+            </a> 
+          </div>
+      </div>
+      </div>
+        </div>
+  </div>
+      
+      <!--============================== content =================================-->
+   <!-- fb share button -->
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) return;
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=799751580053530";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script> 
+                       
+<div id="content" class="content-extra"><div class="ic"></div>
+    <div class="row-1">
+       <div class="container">
+        <div class="row">
+          <ul class="thumbnails thumbnails-1">
+            <% Place.all.map(&:category).uniq.each do |category| %>
+              <li class="span3">
+                    <% @devotional =  Place.categories(category).sample %>
+                   
+                 <div class="thumbnail thumbnail-1">
+                  <h3><%= @devotional.category.upcase %></h3>
+                  <hr>
+                  <img  width="120" height="100" src="<%= @devotional.remote_image_url %>" alt="<%= @devotional.name %>">
+                  <section> 
+                  <strong><%= @devotional.description %> </strong>
+                  
+                    <!-- fb share button -->   
+                        <a href="#" class="btn btn-1">Read More</a> <br>
+                        <div class="fb-share-button" data-href="<%=  @devotional.remote_image_url %> |
+                           " data-type="button_count">
+                        </div>
+                  </section>
+                </div>
+
+              </li>
+              <% end %>
+             </ul>
+
+            </div>
+            </div>
+    </div> <!-- Places Main Div ends here -->
+    
+    <!-- About Me -->
+    <div class="container">
+          <div class="row">
+        <article class="span6">
+              <h3>Shortly about me</h3>
+              <div class="wrapper">
+            <figure class="img-indent"><img src="/assets/dheeraj.jpg " alt="" /></figure>
+            <div class="inner-1 overflow extra">
+                  <div class="txt-1">I am explored lot of places in Telangana.</div>
+                  As i found i have some genetical exploration to find more about places history.And more over Iam Core Telangana Fan.JAI TELANGANA 
+                  <div class="border-horiz"></div>
+                  <div class="overflow">
+                
+                <ul class="list list-pad"> <h3>Team</h3>
+                      <li><a href="/team#dheeraj">Dheeraj Sharma  </a></li>
+                      <li><a href="/team#harish">Harish Nomula  </a></li>
+                      <li><a href="/team#sai"> Sai Kiran Sharma </a></li>
+                      <li><a href="/team#vasista">Vasista Gattu</a></li>
+                      <li><a href="/team#loading">You wanna join?</a></li>
+                    </ul>
+                <ul class="list"> <h3>JOBS</h3>
+                      <li><a href="/jobs#ror">Ruby on Rails Hacker</a></li>
+                      <li><a href="/jobs#uidev">UI THOPE</a></li>
+                      <li><a href="/jobs#cc">Content Creator</a></li>
+                      <li><a href="/jobs#sexyhr">H.R.Executive</a></li>
+                    </ul>
+              </div>
+                </div>
+          </div>
+            </article>
+           <article class="span6">
+              <h3>Latest photoshoots</h3>
+              <ul class="list-photo">
+                 
+              <% @places_images.each do |image| %>
+
+                   <li>
+                       <a href="<%= image %>" class="magnifier" >
+                       <img src="<%= image %>" alt="" />
+                       </a>
+                     </li>
+
+              <% end %>
+               </ul>
+            </article>
+      </div>
+      </div>
+     </div>
+    </div>
+
+<!--============================== footer =================================-->

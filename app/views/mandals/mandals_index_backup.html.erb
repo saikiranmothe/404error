@@ -1,0 +1,47 @@
+<h1>Listing mandals</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Description</th>
+    <th>Wiki link</th>
+    <th>Website</th>
+    <th>Facebook page</th>
+    <th>Remote image url</th>
+    <th>Remote banner url</th>
+    <th>Remote banner1 url</th>
+    <th>Remote banner2 url</th>
+    <th>Remote banner3 url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mandals.each do |mandal| %>
+  <tr>
+    <td><%= mandal.name %></td>
+    <td><%= mandal.address %></td>
+    <td><%= mandal.latitude %></td>
+    <td><%= mandal.longitude %></td>
+    <td><%= mandal.description %></td>
+    <td><%= mandal.wiki_link %></td>
+    <td><%= mandal.website %></td>
+    <td><%= mandal.facebook_page %></td>
+    <td><%= mandal.remote_image_url %></td>
+    <td><%= mandal.remote_banner_url %></td>
+    <td><%= mandal.remote_banner1_url %></td>
+    <td><%= mandal.remote_banner2_url %></td>
+    <td><%= mandal.remote_banner3_url %></td>
+    <td><%= link_to 'Show', mandal %></td>
+    <td><%= link_to 'Edit', edit_mandal_path(mandal) %></td>
+    <td><%= link_to 'Destroy', mandal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mandal', new_mandal_path %>

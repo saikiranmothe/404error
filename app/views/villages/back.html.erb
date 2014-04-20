@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @village.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @village.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @village.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @village.longitude %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @village.description %>
+</p>
+
+<p>
+  <b>Wiki link:</b>
+  <%= @village.wiki_link %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @village.website %>
+</p>
+
+<p>
+  <b>Facebook page:</b>
+  <%= @village.facebook_page %>
+</p>
+
+<p>
+  <b>Remote image url:</b>
+  <%= @village.remote_image_url %>
+</p>
+
+<p>
+  <b>Remote banner url:</b>
+  <%= @village.remote_banner_url %>
+</p>
+
+<p>
+  <b>Remote banner1 url:</b>
+  <%= @village.remote_banner1_url %>
+</p>
+
+<p>
+  <b>Remote banner2 url:</b>
+  <%= @village.remote_banner2_url %>
+</p>
+
+<p>
+  <b>Remote banner3 url:</b>
+  <%= @village.remote_banner3_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_village_path(@village) %> |
+<%= link_to 'Back', villages_path %>
+

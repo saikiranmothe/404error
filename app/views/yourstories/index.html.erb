@@ -1,0 +1,29 @@
+<h1>Listing yourstories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Remote image url</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @yourstories.each do |yourstory| %>
+  <tr>
+    <td><%= yourstory.name %></td>
+    <td><%= yourstory.description %></td>
+    <td><%= yourstory.remote_image_url %></td>
+    <td><%= yourstory.user_id %></td>
+    <td><%= link_to 'Show', yourstory %></td>
+    <td><%= link_to 'Edit', edit_yourstory_path(yourstory) %></td>
+    <td><%= link_to 'Destroy', yourstory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Yourstory', new_yourstory_path %>

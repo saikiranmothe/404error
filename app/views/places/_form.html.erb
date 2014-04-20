@@ -1,0 +1,34 @@
+<%= simple_form_for(@place) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :latitube %>
+    <%= f.input :longitude %>
+    <%= f.input :category %>
+    <%= f.input :description %>
+    <%= f.input :opening_time %>
+    <%= f.input :closeing_time %>
+    <%= f.input :established %>
+    <%= f.input :wiki_link %>
+    <%= f.input :fbpage_link %>
+    <%= f.input :website %>
+    <%= f.input :verify %>
+    <%= f.input :remote_image_url %>
+    <%= f.input :remote_banner_url %>
+    <%= f.input :remote_banner1_url %>
+    <%= f.input :remote_banner2_url %>
+    <%= f.input :remote_banner3_url %>
+    <%= f.input :rating %>
+    <%= f.input :youtube_link %>
+    <%= f.input :village_id %>
+    <%= f.input :mandal_id %>
+    <%= f.input :district_id %>
+    <%= f.input :user_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

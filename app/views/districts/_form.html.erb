@@ -1,0 +1,23 @@
+<%= simple_form_for(@district) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :latitude %>
+    <%= f.input :longitude %>
+    <%= f.input :description %>
+    <%= f.input :wiki_link %>
+    <%= f.input :website %>
+    <%= f.input :facebook_page %>
+    <%= f.input :remote_image_url %>
+    <%= f.input :remote_banner_url %>
+    <%= f.input :remote_banner1_url %>
+    <%= f.input :remote_banner2_url %>
+    <%= f.input :remote_banner3_url %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

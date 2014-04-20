@@ -1,0 +1,47 @@
+<h1>Listing districts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Description</th>
+    <th>Wiki link</th>
+    <th>Website</th>
+    <th>Facebook page</th>
+    <th>Remote image url</th>
+    <th>Remote banner url</th>
+    <th>Remote banner1 url</th>
+    <th>Remote banner2 url</th>
+    <th>Remote banner3 url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @districts.each do |district| %>
+  <tr>
+    <td><%= district.name %></td>
+    <td><%= district.address %></td>
+    <td><%= district.latitude %></td>
+    <td><%= district.longitude %></td>
+    <td><%= district.description %></td>
+    <td><%= district.wiki_link %></td>
+    <td><%= district.website %></td>
+    <td><%= district.facebook_page %></td>
+    <td><%= district.remote_image_url %></td>
+    <td><%= district.remote_banner_url %></td>
+    <td><%= district.remote_banner1_url %></td>
+    <td><%= district.remote_banner2_url %></td>
+    <td><%= district.remote_banner3_url %></td>
+    <td><%= link_to 'Show', district %></td>
+    <td><%= link_to 'Edit', edit_district_path(district) %></td>
+    <td><%= link_to 'Destroy', district, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New District', new_district_path %>

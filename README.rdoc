@@ -1,0 +1,170 @@
+==Main Tasks we need to finish by morning 
+
+==1.Internal Pages of All   /index.html.erb -- show.html.erb
+==2.Upload Dummy data to all tables
+==3.Complete JOBS/TEAM Views
+
+
+contact us
+team
+about
+jobs
+
+
+=====================
+district 
+mandals
+village
+places
+==================
+
+
+== Telangana Places
+
+  Main Models
+
+              User Model
+                ======
+
+   1.Districts
+   2.Mandals              4.Places
+   3.Villages
+
+
+relations
+==================
+
+District 
+===========
+has_many :mandals
+has_many :places
+  
+db fields 
+============
+name:string address:string latitude:float longitude:float description:text wiki_link:string 
+website:string 
+facebook_page:string
+remote_image_url:string
+remote_banner_url:string
+remote_banner1_url:string
+remote_banner2_url:string
+remote_banner3_url:string
+
+
+Mandal
+=============
+has_many :villages
+has_many :places
+
+belongs_to :district 
+
+attr_accesible :district_id 
+
+  db fields 
+============
+name:string
+address:string 
+latitude:float 
+longitude:float
+description:text
+wiki_link:string 
+website:string 
+facebook_page:string
+remote_image_url:string
+remote_banner_url:string
+remote_banner1_url:string
+remote_banner2_url:string
+remote_banner3_url:string
+
+
+Village
+==============
+
+has_many :places
+
+belongs_to :mandal
+
+attr_accesible :mandal_id
+
+  db fields 
+============
+name:string
+address:string 
+latitude:float 
+longitude:float
+description:text
+wiki_link:string 
+website:string 
+facebook_page:string
+remote_image_url:string
+remote_banner_url:string
+remote_banner1_url:string
+remote_banner2_url:string
+remote_banner3_url:string
+
+
+Places
+==============
+belongs_to :village
+belongs_to :mandal
+belongs_to :district 
+belongs_to :user
+
+  
+
+db fields 
+============
+name:string
+address:string 
+latitude:float 
+longitude:float
+category:string 
+description:text 
+opening_time:string
+closeing_time:string
+established:string
+wiki_link:string
+fbpage_link:string
+website:string
+verify:boolean
+remote_image_url:string
+remote_banner_url:string
+remote_banner1_url:string
+remote_banner2_url:string
+remote_banner3_url:string
+rating:string 
+
+
+User 
+===
+has_many :places
+has-many :tourstories
+
+Your Tour Story
+===========
+belongs_to :user
+name:string
+description:text 
+remote_image_url:string
+
+
+db fields 
+============
+name:string
+address:string 
+latitude:float 
+longitude:float
+description:text
+wiki_link:string 
+website:string 
+facebook_page:string
+remote_image_url:string
+remote_banner_url:string
+remote_banner1_url:string
+remote_banner2_url:string
+remote_banner3_url:string
+
+
+
+
+

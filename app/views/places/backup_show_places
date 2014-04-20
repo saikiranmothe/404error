@@ -1,0 +1,125 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @place.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @place.address %>
+</p>
+
+<p>
+  <b>Latitube:</b>
+  <%= @place.latitube %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @place.longitude %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @place.category %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @place.description %>
+</p>
+
+<p>
+  <b>Opening time:</b>
+  <%= @place.opening_time %>
+</p>
+
+<p>
+  <b>Closeing time:</b>
+  <%= @place.closeing_time %>
+</p>
+
+<p>
+  <b>Established:</b>
+  <%= @place.established %>
+</p>
+
+<p>
+  <b>Wiki link:</b>
+  <%= @place.wiki_link %>
+</p>
+
+<p>
+  <b>Fbpage link:</b>
+  <%= @place.fbpage_link %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @place.website %>
+</p>
+
+<p>
+  <b>Verify:</b>
+  <%= @place.verify %>
+</p>
+
+<p>
+  <b>Remote image url:</b>
+  <%= @place.remote_image_url %>
+</p>
+
+<p>
+  <b>Remote banner url:</b>
+  <%= @place.remote_banner_url %>
+</p>
+
+<p>
+  <b>Remote banner1 url:</b>
+  <%= @place.remote_banner1_url %>
+</p>
+
+<p>
+  <b>Remote banner2 url:</b>
+  <%= @place.remote_banner2_url %>
+</p>
+
+<p>
+  <b>Remote banner3 url:</b>
+  <%= @place.remote_banner3_url %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @place.rating %>
+</p>
+
+<p>
+  <b>Youtube link:</b>
+  <%= @place.youtube_link %>
+</p>
+
+<p>
+  <b>Village:</b>
+  <%= @place.village_id %>
+</p>
+
+<p>
+  <b>Mandal:</b>
+  <%= @place.mandal_id %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @place.district_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @place.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

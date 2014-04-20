@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tgplaces</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
+	<script>		
+		 jQuery(window).load(function() {	
+		 $x = $(window).width();		
+	if($x > 1024)
+	{			
+	jQuery("#content .row").preloader();}	
+	
+	jQuery(".list-blog li:last-child").addClass("last"); 
+	jQuery(".list li:last-child").addClass("last"); 
+
+	
+    jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
+  		  }); 
+					
+	</script>
+</head>
+<body>
+<!-- navbar partial loads here -->
+	<%= render "layouts/navbar" %>
+<!-- navbar partial loads here -->
+
+<%= yield %>
+<!-- footer partial loads here -->
+	<%= render "layouts/footer" %>
+<!-- footer partial loads here -->
+</body>
+</html>

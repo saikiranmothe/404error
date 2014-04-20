@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  description: MyText
+  wiki_link: MyString
+  website: MyString
+  facebook_page: MyString
+  remote_image_url: MyString
+  remote_banner_url: MyString
+  remote_banner1_url: MyString
+  remote_banner2_url: MyString
+  remote_banner3_url: MyString
+
+two:
+  name: MyString
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  description: MyText
+  wiki_link: MyString
+  website: MyString
+  facebook_page: MyString
+  remote_image_url: MyString
+  remote_banner_url: MyString
+  remote_banner1_url: MyString
+  remote_banner2_url: MyString
+  remote_banner3_url: MyString

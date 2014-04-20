@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  latitube: 1.5
+  longitude: 1.5
+  category: MyString
+  description: MyText
+  opening_time: MyString
+  closeing_time: MyString
+  established: MyString
+  wiki_link: MyString
+  fbpage_link: MyString
+  website: MyString
+  verify: false
+  remote_image_url: MyString
+  remote_banner_url: MyString
+  remote_banner1_url: MyString
+  remote_banner2_url: MyString
+  remote_banner3_url: MyString
+  rating: MyString
+  youtube_link: MyString
+  village_id: 1
+  mandal_id: 1
+  district_id: 1
+  user_id: 1
+
+two:
+  name: MyString
+  address: MyString
+  latitube: 1.5
+  longitude: 1.5
+  category: MyString
+  description: MyText
+  opening_time: MyString
+  closeing_time: MyString
+  established: MyString
+  wiki_link: MyString
+  fbpage_link: MyString
+  website: MyString
+  verify: false
+  remote_image_url: MyString
+  remote_banner_url: MyString
+  remote_banner1_url: MyString
+  remote_banner2_url: MyString
+  remote_banner3_url: MyString
+  rating: MyString
+  youtube_link: MyString
+  village_id: 1
+  mandal_id: 1
+  district_id: 1
+  user_id: 1

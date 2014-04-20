@@ -1,0 +1,47 @@
+  <h1>Listing villages</h1>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Description</th>
+      <th>Wiki link</th>
+      <th>Website</th>
+      <th>Facebook page</th>
+      <th>Remote image url</th>
+      <th>Remote banner url</th>
+      <th>Remote banner1 url</th>
+      <th>Remote banner2 url</th>
+      <th>Remote banner3 url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <% @villages.each do |village| %>
+    <tr>
+      <td><%= village.name %></td>
+      <td><%= village.address %></td>
+      <td><%= village.latitude %></td>
+      <td><%= village.longitude %></td>
+      <td><%= village.description %></td>
+      <td><%= village.wiki_link %></td>
+      <td><%= village.website %></td>
+      <td><%= village.facebook_page %></td>
+      <td><%= village.remote_image_url %></td>
+      <td><%= village.remote_banner_url %></td>
+      <td><%= village.remote_banner1_url %></td>
+      <td><%= village.remote_banner2_url %></td>
+      <td><%= village.remote_banner3_url %></td>
+      <td><%= link_to 'Show', village %></td>
+      <td><%= link_to 'Edit', edit_village_path(village) %></td>
+      <td><%= link_to 'Destroy', village, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Village', new_village_path %>
