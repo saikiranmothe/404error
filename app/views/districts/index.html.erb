@@ -52,7 +52,7 @@
             <% District.latest.each do |district| %>
        
              <li class="box">
-                  <h6 class="text-center"><%= district.name %></h6>
+                  <h6 class="text-left"><%= district.name %></h6>
                    <hr> 
                   <a href="<%= district.website %>" class="magnifier" >
                   <img alt="<%= district.name %>" src="<%= district.remote_image_url %>"></a>
@@ -64,18 +64,5 @@
     </div>
       </div>
 
-  <!--============================== footer =================================-->
-  <footer>
-        <div class="container clearfix">
-      <ul class="list-social pull-right">
-            <li><a class="icon-1" href="#"></a></li>
-            <li><a class="icon-2" href="#"></a></li>
-            <li><a class="icon-3" href="https://twitter.com/oswt"></a></li>
-            <li><a class="icon-4" href="#"></a></li>
-          </ul>
-      <div class="privacy pull-left">Website Template designed by <a href="http://www.openresponsive.com" target="_blank" rel="nofollow">openresponsive</a><br />Popular free web templates <a href="http://www.openresponsive.in" target="_blank">at openresponsive.in</a></div>
-    </div>
-      </footer>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
   </body>
   </html>

@@ -13,6 +13,9 @@ Tgplaces::Application.routes.draw do
   get "static/team"
   match "team"  => "static#team"
 
+  get "static/galary"
+  match "galary" => "static#galary"
+
 root :to => 'static#home'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

@@ -53,7 +53,7 @@
                   <hr>
                   <img  width="120" height="100" src="<%= @devotional.remote_image_url %>" alt="<%= @devotional.name %>">
                   <section> 
-                  <strong><%= @devotional.description %> </strong>
+                  <strong><%= truncate(@devotional.description, :length=>100, :separator => '' )%> </strong>
                   
                     <!-- fb share button -->   
                         <a href="#" class="btn btn-1">Read More</a> <br>

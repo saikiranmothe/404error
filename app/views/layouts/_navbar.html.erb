@@ -13,14 +13,14 @@
                 <li class="sub-menu"><a href="#">Districts</a>
                     <ul>
                       <% District.all.each do |district| %>
-                       <li><%=link_to district.name.upcase ,district %></li>
+                      <li ><%=link_to district.name.downcase ,district %></li>
                        <% end %>
                     </ul>
                 </li>
                  <li class="sub-menu"><a href="#">Places</a>
                     <ul>
                      <% Place.latest.each do |place| %>
-                       <li><%=link_to place.name.upcase ,place %></li>
+                       <li><%=link_to place.name.upcase ,place ,:style => "font-size:12px"%></li>
                        <% end %>
                     </ul>
                 </li>
