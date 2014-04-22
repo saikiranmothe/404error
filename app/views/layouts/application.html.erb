@@ -5,8 +5,10 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
-	<script>		
+  	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='/assets/jquery.preloader.js'></"+"script>");}	</script>
+  	<script type="text/javascript" src="/assets/bootstrap.js"></script>
+	<script>	
+
 		 jQuery(window).load(function() {	
 		 $x = $(window).width();		
 	if($x > 1024)
@@ -30,6 +32,7 @@
 <%= yield %>
 <!-- footer partial loads here -->
 	<%= render "layouts/footer" %>
+
 <!-- footer partial loads here -->
 </body>
 </html>

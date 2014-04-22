@@ -17,5 +17,10 @@ class StaticController < ApplicationController
   def team
   end
 
+  def gallery
+  @place_gallery = Place.pluck(:remote_banner3_url)
+
+  end
+
 
 end

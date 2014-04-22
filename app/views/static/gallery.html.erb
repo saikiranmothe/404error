@@ -8,10 +8,10 @@
 	<meta name="description" content="Your description">
 	<meta name="keywords" content="Your keywords">
 	<meta name="author" content="Your name">
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/assets/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/assets/responsive.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/assets/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="/assets/touchTouch.css" type="text/css" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/superfish.js"></script>
@@ -19,7 +19,7 @@
     <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/touchTouch.jquery.js"></script> 
     
-	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
+	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='/assets/jquery.preloader.js'></"+"script>");}	</script>
 	<script>		
 		 jQuery(window).load(function() {	
 		 $x = $(window).width();		
@@ -48,21 +48,66 @@
 
 	<body>
 <div class="spinner"></div>
+<!--============================== header =================================-->
+<header>
+      <div class="container clearfix">
+    <div class="row">
+          <div class="span12">
+       
+      </div>
+        </div>
+  </div>
+    </header>
 <div class="bg-content">       
   <!--============================== content =================================-->      
       <div id="content"><div class="ic"></div>
     <div class="container">
           <div class="row">
         <article class="span12">
-        <h3>Photo Galary Of Telangana</h3>
+        <h3>Telangana Popular Photography</h3>
          </article>
         <div class="clear"></div>
-         <ul class="portfolio clearfix">           
-         </ul> 
+         <ul class="portfolio clearfix">  
+
+
+
+						<article class="span6">
+              <h3>Latest photoshoots</h3>
+              <ul class="list-photo">
+                  <%@place_gallery.each do |image| %>
+                   
+                   <li>
+                    <img src="<%=image%>" width="200" height="85" >
+
+
+                     </li>
+                     <%end%>
+               </ul>
+            </article>                           
+         
+          <!-- <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img1.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img2.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img3.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img4.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img5.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img6.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img7.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img8.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img9.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img10.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img11.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img12.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img13.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img14.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img15.jpg"></a></li> 
+           <li class="box"><a href="img/image-blank.png" class="magnifier" ><img alt="" src="img/page3-img16.jpg"></a></li>     -->                   
+            </ul> 
       </div>
         </div>
   </div>
     </div>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+<script type="text/javascript" src="/assets/bootstrap.js"></script>
 </body>
 </html>

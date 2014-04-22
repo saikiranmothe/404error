@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @district.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @district.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @district.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @district.longitude %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @district.description %>
+</p>
+
+<p>
+  <b>Wiki link:</b>
+  <%= @district.wiki_link %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @district.website %>
+</p>
+
+<p>
+  <b>Facebook page:</b>
+  <%= @district.facebook_page %>
+</p>
+
+<p>
+  <b>Remote image url:</b>
+  <%= @district.remote_image_url %>
+</p>
+
+<p>
+  <b>Remote banner url:</b>
+  <%= @district.remote_banner_url %>
+</p>
+
+<p>
+  <b>Remote banner1 url:</b>
+  <%= @district.remote_banner1_url %>
+</p>
+
+<p>
+  <b>Remote banner2 url:</b>
+  <%= @district.remote_banner2_url %>
+</p>
+
+<p>
+  <b>Remote banner3 url:</b>
+  <%= @district.remote_banner3_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_district_path(@district) %> |
+<%= link_to 'Back', districts_path %>
