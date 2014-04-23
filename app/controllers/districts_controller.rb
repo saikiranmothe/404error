@@ -1,20 +1,27 @@
 class DistrictsController < ApplicationController
   # GET /districts
   # GET /districts.json
+  @places =Place.all
   def index
-    @districts = District.all
-
+     if params[:search].present?
+      @locations = District.near(params[:search], 50, :order => :distance)
+    else
+      @locations = District.all
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @districts }
     end
   end
 
+
+
+
   # GET /districts/1
   # GET /districts/1.json
   def show
     @district = District.find(params[:id])
-
+    @locations = Place.all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @district }

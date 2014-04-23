@@ -7,8 +7,8 @@ class Place < ActiveRecord::Base
 	belongs_to :district 
 	belongs_to :user
 
-  # geocoded_by :address
-  # after_validation :geocode, :if => :address_changed?
+  geocoded_by :address
+  after_validation :geocode, :if => :address_changed?
 
 	#scope methods
   def self.latest

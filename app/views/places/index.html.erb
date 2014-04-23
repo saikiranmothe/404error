@@ -42,8 +42,14 @@
       <div class="container">
             <div class="row">
           <article class="span12">
-          <h3 class="text-center">places</h3>
+          <h3 class="text-center">Places</h3>
           <hr>
+               <%= form_tag places_path, :method => :get do %>
+            <p>
+              <%= text_field_tag :search, params[:search] %>
+              <%= submit_tag "Search Near", :name => nil %>
+            </p>
+          <% end %>
            </article>
           <div class="clear"></div>
            <ul class="portfolio clearfix">           

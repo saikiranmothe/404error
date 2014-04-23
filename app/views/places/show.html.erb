@@ -69,28 +69,40 @@
           </ul>
           </div>  
         </article>
+
+      
         <article class="span4">
           <h3 class="extra">Search</h3>
-          <form id="search" action="search.php" method="GET" accept-charset="utf-8" >
-            <div class="clearfix">
-              <input type="text" name="s" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''" >
-              <a href="#" onClick="document.getElementById('search').submit()" class="btn btn-1">Search</a> </div>
-          </form>
+            <%= form_tag places_path, :method => :get do %>
+              <div class="clearfix">
+                <p>
+                  <%= text_field_tag :search, params[:search] %>
+                  <%= submit_tag "Search Near",:class => "btn btn-", :name => nil %>
+                </p>
+              </div>
+            <% end %>
+
+
           <h3>Nearby Places</h3>
           <ul class="list extra extra1">           
-            <li><a href="#">Ut wisi enim ad minim veniam</a></li>
-            <li><a href="#">Quis nostrud exerci tation ullamcorper</a></li>
-            <li><a href="#">Suscipit lobortis nisl ut aliquip</a></li>
-            <li><a href="#">Commodo consequat</a></li>
-            <li><a href="#">Duis autem vel eum iriure dolor in hendrerit</a></li>
-            <li><a href="#">Vulputate velit esse molestie consequat</a></li>
-            <li><a href="#">Fel illum dolore eu feugiat nulla</a></li>
-            <li><a href="#">Facilisis at vero eros et accumsan iusto</a></li>
-            <li><a href="#">Odio dignissim qui blandit</a></li>
-            <li><a href="#">Praesent luptatum zzril delenit augue</a></li>                      
+           
+
+
+
+      <h3>Nearby locations</h3>
+      <ul>
+      <% for place in @place.nearbys(10) %>
+        <li><%= link_to place.address, place %> (<%= place.distance.round(2) %> miles)</li>
+      <% end %>
+      </ul>
+
+     
       </ul>
           <h3>Places Tags</h3>
          <div class="wrapper">
+         
+          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@place.latitude}%2C#{@place.longitude}" %>
+
           <ul class="list extra2 list-pad ">
             <li><a href="#">November 2012</a></li>
             <li><a href="#">October 2012</a></li>

@@ -85,16 +85,11 @@
           <h3>Nearby Places</h3>
           <hr>
           <ul class="list extra extra1"> 
-            <% unless @location.nil? %>  
-                     
-            <% for location in @location.nearbys(10) %>
-              
-            
-            <li><%= link_to location.address, location %> (<%= location.distance.round(5) %> miles)</li>
-             <% end %>
-          <% end %>
+
+          
          </ul> <!-- places ends here -->
           <h3>Places Tags</h3>
+          <hr>
          <div class="wrapper">
           <ul class="list extra2 list-pad ">
             <li><a href="#">November 2012</a></li>
