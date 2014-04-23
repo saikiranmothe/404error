@@ -67,10 +67,17 @@
             
                                  
           </ul>
+          <hr>
           </div> <!-- districts show page -->
 
 
-       
+        <div><h1>Places in <%= @district.name %> </h1>
+         <hr>
+          
+           <% @district.places.each do |place| %>
+               <li> <h5> <%= link_to place.name,place %></h5></li>
+            <% end %>
+        </div>
         
 
 
@@ -84,25 +91,15 @@
 
           
          </ul> <!-- places ends here -->
-          <h3>Places Tags</h3>
+          <h3>Mandals in <%= @district.name.upcase %></h3>
           <hr>
          <div class="wrapper">
           <ul class="list extra2 list-pad ">
-            <li><a href="#">November 2012</a></li>
-            <li><a href="#">October 2012</a></li>
-            <li><a href="#">September 2012</a></li>
-            <li><a href="#">August 2012</a></li>
-            <li><a href="#">July 2012</a></li>
-            <li><a href="#">June 2012</a></li>
+            <% @district.mandals.each do |mandal| %>
+               <li> <h3> <%= link_to mandal.name,mandal %></h3></li>
+            <% end %>
           </ul>
-            <ul class="list extra2">
-            <li><a href="#">May 2012</a></li>
-            <li><a href="#">April 2012</a></li>
-            <li><a href="#">March 2012</a></li>
-            <li><a href="#">February 2012</a></li>
-            <li><a href="#">January 2012</a></li>
-            <li><a href="#">December 2011</a></li>
-          </ul>
+         
           
           </div>
         </article>
