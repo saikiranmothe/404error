@@ -16,6 +16,9 @@ Tgplaces::Application.routes.draw do
   get "static/gallery"
   match "gallery" => "static#gallery"
 
+  get "static/privacypolicy"
+  match "privacypolicy" => "static#privacypolicy"
+
 root :to => 'static#home'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

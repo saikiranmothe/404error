@@ -7,6 +7,14 @@ gem 'rails', '3.2.17'
 group :development do
  gem 'sqlite3'
 end
+
+
+group :production do
+	gem 'pg'
+	gem 'passenger'
+	gem 'rails_12factor'
+end
+
 gem 'acts-as-taggable-on'
 
 gem 'devise'
