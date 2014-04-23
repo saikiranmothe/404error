@@ -67,7 +67,13 @@
             
                                  
           </ul>
-          </div>  
+          </div> <!-- districts show page -->
+
+
+       
+        
+
+
         </article>
         <article class="span4">
           <h3 class="extra">Search</h3>
@@ -77,18 +83,17 @@
               <a href="#" onClick="document.getElementById('search').submit()" class="btn btn-1">Search</a> </div>
           </form>
           <h3>Nearby Places</h3>
-          <ul class="list extra extra1">           
-            <li><a href="#">Ut wisi enim ad minim veniam</a></li>
-            <li><a href="#">Quis nostrud exerci tation ullamcorper</a></li>
-            <li><a href="#">Suscipit lobortis nisl ut aliquip</a></li>
-            <li><a href="#">Commodo consequat</a></li>
-            <li><a href="#">Duis autem vel eum iriure dolor in hendrerit</a></li>
-            <li><a href="#">Vulputate velit esse molestie consequat</a></li>
-            <li><a href="#">Fel illum dolore eu feugiat nulla</a></li>
-            <li><a href="#">Facilisis at vero eros et accumsan iusto</a></li>
-            <li><a href="#">Odio dignissim qui blandit</a></li>
-            <li><a href="#">Praesent luptatum zzril delenit augue</a></li>                      
-      </ul>
+          <hr>
+          <ul class="list extra extra1"> 
+            <% unless @location.nil? %>  
+                     
+            <% for location in @location.nearbys(10) %>
+              
+            
+            <li><%= link_to location.address, location %> (<%= location.distance.round(5) %> miles)</li>
+             <% end %>
+          <% end %>
+         </ul> <!-- places ends here -->
           <h3>Places Tags</h3>
          <div class="wrapper">
           <ul class="list extra2 list-pad ">

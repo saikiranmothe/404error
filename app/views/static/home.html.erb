@@ -2,74 +2,77 @@
   <div class="container">
      <div class="row">
         <div class="span12"> 
-      <!--============================== slider =================================-->
-      <div class="flexslider">
-          <h1 class="text-center">Featured Places </h1>
-          <hr>
-          <ul class="slides">
-            <% @latest_places.each do |place| %>
+     
+              <!--====================== slider ==================-->
+              <div class="flexslider">
+                  <h1 class="text-center">Featured Places </h1>
+                  <hr>
+                  <ul class="slides">
+                    <% @latest_places.each do |place| %>
 
-            <li> <img width="770" height="393" src="<%= place.remote_banner_url %>" alt="<%= place.name %>" > </li>
-            
-            <% end  %>
-          </ul>
+                    <li> <img width="770" height="393" src="<%= place.remote_banner_url %>" alt="<%= place.name %>" > </li>
+                    
+                    <% end  %>
+                  </ul>
 
-      </div>
-      <span id="responsiveFlag"></span>
-      <div class="block-slogan">
-          <h2>Welcome to TelanganaPlaces</h2>
-          <div>
-            <p style="color:pink">
-            TelanganaPlaces is all about platform for Telangana Places.Tourism Platform of Telangana.<a class="block-slogan" align="center" href="/about" target="" class="link-1">   for more info about Telangana Places..</p>
-            </a> 
+              </div>
+              <!--====================== slider ==================-->
+
+               <span id="responsiveFlag"></span>
+              <div class="block-slogan">
+                  <h2>Welcome to TelanganaPlaces</h2>
+                  <div>
+                    <p style="color:pink">
+                    TelanganaPlaces is all about platform for Telangana Places.Tourism Platform of Telangana.<a class="block-slogan" align="center" href="/about" target="" class="link-1">   for more info about Telangana Places..</p>
+                    </a> 
+                  </div>
+              </div>
           </div>
-      </div>
-      </div>
         </div>
-  </div>
+     </div>
       
       <!--============================== content =================================-->
    <!-- fb share button -->
-                        <div id="fb-root"></div>
-                        <script>(function(d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;
-                          js = d.createElement(s); js.id = id;
-                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=799751580053530";
-                          fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script> 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=799751580053530";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> 
                        
-<div id="content" class="content-extra"><div class="ic"></div>
-    <div class="row-1">
-       <div class="container">
-        <div class="row">
-          <ul class="thumbnails thumbnails-1">
-            <% Place.all.map(&:category).uniq.each do |category| %>
-              <li class="span3">
-                    <% @devotional =  Place.categories(category).sample %>
-                   
-                 <div class="thumbnail thumbnail-1">
-                  <h3><%= @devotional.category.upcase %></h3>
-                  <hr>
-                  <img  width="120" height="100" src="<%= @devotional.remote_image_url %>" alt="<%= @devotional.name %>">
-                  <section> 
-                  <strong><%= truncate(@devotional.description, :length=>100, :separator => '' )%> </strong>
-                  
-                    <!-- fb share button -->   
-                        <a href="#" class="btn btn-1">Read More</a> <br><hr>
-                        <div class="fb-share-button" data-href="<%=  @devotional.name %> |
-                           " data-type="button_count">
-                        </div>
-                  </section>
-                </div>
+   <div id="content" class="content-extra"><div class="ic"></div>
+      <div class="row-1">
+         <div class="container">
+          <div class="row">
+            <ul class="thumbnails thumbnails-1">
+              <% Place.all.map(&:category).uniq.each do |category| %>
+                <li class="span3">
+                      <% @devotional =  Place.categories(category).sample %>
+                     
+                   <div class="thumbnail thumbnail-1">
+                    <h3><%= @devotional.category.upcase %></h3>
+                    <hr>
+                    <img  width="120" height="100" src="<%= @devotional.remote_image_url %>" alt="<%= @devotional.name %>">
+                    <section> 
+                    <strong><%= truncate(@devotional.description, :length=>100, :separator => '' )%> </strong>
+                    
+                      <!-- fb share button -->   
+                          <a href="#" class="btn btn-1">Read More</a> <br><hr>
+                          <div class="fb-share-button" data-href="<%=  @devotional.name %> |
+                             " data-type="button_count">
+                          </div>
+                    </section>
+                  </div>
 
-              </li>
-              <% end %>
-             </ul>
+                </li>
+                <% end %>
+               </ul>
 
-            </div>
-            </div>
-    </div> <!-- Places Main Div ends here -->
+              </div>
+              </div>
+      </div> <!-- Places Main Div ends here -->
     
     <!-- About Me -->
     <div class="container">
@@ -85,6 +88,7 @@
                   <div class="overflow">
                 
                 <ul class="list list-pad"> <h3>Team</h3>
+                 <hr>
                       <li><a href="/team#dheeraj">Dheeraj Sharma  </a></li>
                       <li><a href="/team#harish">Harish Nomula  </a></li>
                       <li><a href="/team#sai"> Sai Kiran Sharma </a></li>
@@ -92,6 +96,7 @@
                       <li><a href="/team#loading">You wanna join?</a></li>
                 </ul>
                 <ul class="list"> <h3>JOBS</h3>
+                <hr>
                       <li><a href="/jobs#ror">Ruby on Rails Hacker</a></li>
                       <li><a href="/jobs#uidev">UI THOPE</a></li>
                       <li><a href="/jobs#cc">Content Creator</a></li>
@@ -107,4 +112,4 @@
      </div>
     </div>
 
-<!--============================== footer =================================-->
+<!-- ================== footer ================= -->
